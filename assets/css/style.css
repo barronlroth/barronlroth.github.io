@@ -12,7 +12,7 @@
 ################################################################# */
 
 /* Import fonts */
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
 
 * { 
 	margin: 0;
@@ -132,6 +132,9 @@ input {
 	right: 0;
 }
 
+/* BUTTONS */
+
+
 .btn-green {
 	background: #03C9A9;
 	color: white;
@@ -143,7 +146,39 @@ input {
 	color: white
 }
 
+.btn-trans {
+	background: transparent;
+	color: #636c6c;
+	font-weight: 700;
+	border: 3px solid #ccc;
+	border-radius: 30px;
+	font-size: 16px;
+}
 
+.btn-trans:hover {
+	background: white;
+	color: #444;
+}
+
+.btn-green2 {
+	color: #fff;
+	font-size: 18px;
+	min-height: 60px;
+	border-radius: 40px;
+	text-decoration: none;
+	display: inline-block;
+	line-height: 24px;
+	padding: 16px 30px 20px;
+	z-index: 1;
+	position: relative;
+	border: none;
+	background: #5dca88;
+}
+
+.btn-green2:hover {
+	background: #21b191;
+	color: white;
+}
 
 /* HEADER SECTION */
 #h {
@@ -167,13 +202,43 @@ input {
 }
 
 #h h1 {
-	font-weight: 900;
+	font-weight: 400;
 	color: #03C9A9;
 	font-size: 90px;
 }
 
+#h h1 .thin {
+	font-weight: 100;
+}
+
 #h h2 {
 	color: #1BA39C;
+}
+
+/* Theme4 image right CONFIGURATION */
+#theme4ImageRight {
+	background: #f2f9fe;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	margin-bottom: 50px;
+	color: #ccc;
+}
+
+#theme4ImageRight h2 {
+	color: #5dca88;
+	font-size: 36px;
+	line-height: 48px;
+}
+
+#theme4ImageRight h3 {
+	color: #ccc;
+	font-weight: 400;
+	font-size: 28px;
+}
+
+#theme4ImageRight hr{
+	width: 20%;
+	border-bottom: 3px solid #ccc;
 }
 
 /* CALL TO ACTION SECTION */
