@@ -98,7 +98,7 @@ a {
 	-o-transition: background-color .4s linear, color .4s linear;
 	-ms-transition: background-color .4s linear, color .4s linear;
 	transition: background-color .4s linear, color .4s linear;
-	color: #1abc9c;
+	color: white;
 }
 a:hover,
 a:focus {
@@ -447,3 +447,28 @@ input {
 #f h3 {
 	color: white;
 }
+
+/* Social Section */
+#social {
+	background: #37505F;
+	color: white;
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+#social h4 {
+	font-weight: 400;
+	font-size: 17px;
+	text-align: center;
+}
+
+/*#social h1 {
+	font-size: 80px;
+	font-weight: 700;
+	text-align: center;
+}
+
+#social p {
+	color: white;
+	font-size: 16px;
+}*/
