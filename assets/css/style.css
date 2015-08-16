@@ -231,7 +231,7 @@ input {
 
 /* HEADER SECTION */
 #h {
-	background: url(../img/header.jpg) no-repeat center top;
+	background: url(../img/skyline.jpg) no-repeat center top;
 	padding-top: 200px;
 	text-align:center;
 	background-attachment: relative;
@@ -252,7 +252,7 @@ input {
 
 #h h1 {
 	font-weight: 400;
-	color: #03C9A9;
+	color: #FFFFFF;
 	font-size: 90px;
 }
 
@@ -261,7 +261,7 @@ input {
 }
 
 #h h2 {
-	color: #1BA39C;
+	color: #FFFFFF;
 }
 
 /* Theme4 image right CONFIGURATION */
@@ -269,7 +269,7 @@ input {
 	background: #f2f9fe;
 	padding-top: 80px;
 	padding-bottom: 80px;
-	margin-bottom: 50px;
+/*	margin-bottom: 50px;*/
 	color: #ccc;
 }
 
@@ -290,6 +290,57 @@ input {
 	border-bottom: 3px solid #ccc;
 }
 
+/* Downtyme CONFIGURATION */
+#DT {
+	background: #f2f9fe;
+	padding-top: 80px;
+	padding-bottom: 80px;
+/*	margin-bottom: 50px;*/
+	color: #ccc;
+}
+
+#DT h2 {
+	color: #e05e4d;
+	font-size: 36px;
+	line-height: 48px;
+}
+
+#DT h3 {
+	color: #ccc;
+	font-weight: 400;
+	font-size: 28px;
+}
+
+#DT hr{
+	width: 20%;
+	border-bottom: 3px solid #ccc;
+}
+
+/* Tablelist CONFIGURATION */
+#TL {
+	background: #f2f9fe;
+	padding-top: 80px;
+	padding-bottom: 80px;
+/*	margin-bottom: 50px;*/
+	color: #ccc;
+}
+
+#TL h2 {
+	color: #29ABA1;
+	font-size: 36px;
+	line-height: 48px;
+}
+
+#TL h3 {
+	color: #ccc;
+	font-weight: 400;
+	font-size: 28px;
+}
+
+#TL hr{
+	width: 20%;
+	border-bottom: 3px solid #ccc;
+}
 
 #w01 {
 	padding: 0px !important;
