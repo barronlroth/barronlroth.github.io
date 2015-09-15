@@ -100,13 +100,13 @@ a:focus {
 /* Background Colors */
 
 .bg-color {
-	height: 450px;
+	height: 250px;
 	margin: 0px;
 }
 
 .squares {
 	color: white;
-	padding-top: 90px;
+	padding-top: 50px;
 }
 
 .squares p {
