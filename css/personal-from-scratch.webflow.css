@@ -234,6 +234,10 @@ a {
   background-position: 50% 100%;
 }
 
+.home-hero-image.other {
+  background-image: url('../images/2020-08-28-0140-Edit-small.jpg');
+}
+
 .home-hero-content {
   padding-right: 80px;
   padding-left: 80px;
@@ -315,6 +319,9 @@ a {
   }
   .home-hero-image.blade {
     background-position: 100% 47%;
+  }
+  .home-hero-image.other {
+    background-position: 50% 20%;
   }
   .paragraph {
     font-size: 16px;
@@ -693,6 +700,54 @@ a {
 }
 
 #w-node-2c5408dec287-cea3d247 {
+  -ms-grid-row: span 3;
+  grid-row-start: span 3;
+  -ms-grid-row-span: 3;
+  grid-row-end: span 3;
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-column-align: end;
+  justify-self: end;
+}
+
+#w-node-98a24ce5c4ad-cea3d247 {
+  -ms-grid-row: span 3;
+  grid-row-start: span 3;
+  -ms-grid-row-span: 3;
+  grid-row-end: span 3;
+  -ms-grid-column: span 2;
+  grid-column-start: span 2;
+  -ms-grid-column-span: 2;
+  grid-column-end: span 2;
+}
+
+#w-node-98a24ce5c4b2-cea3d247 {
+  -ms-grid-column-span: 1;
+  grid-column-end: 4;
+  -ms-grid-column: 3;
+  grid-column-start: 3;
+  -ms-grid-row-span: 1;
+  grid-row-end: 3;
+  -ms-grid-row: 2;
+  grid-row-start: 2;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+#w-node-98a24ce5c4b7-cea3d247 {
+  -ms-grid-column-span: 1;
+  grid-column-end: 4;
+  -ms-grid-column: 3;
+  grid-column-start: 3;
+  -ms-grid-row-span: 1;
+  grid-row-end: 4;
+  -ms-grid-row: 3;
+  grid-row-start: 3;
+}
+
+#w-node-98a24ce5c4bb-cea3d247 {
   -ms-grid-row: span 3;
   grid-row-start: span 3;
   -ms-grid-row-span: 3;
