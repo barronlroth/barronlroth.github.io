@@ -209,8 +209,8 @@ a {
 }
 
 .home-hero-image {
-  background-image: url('../images/IMG_8122-2---Copy.jpg');
-  background-position: 50% 100%;
+  background-image: url('../images/2020-08-28-0140-Edit-small.jpg');
+  background-position: 50% 50%;
   background-size: cover;
 }
 
@@ -235,7 +235,7 @@ a {
 }
 
 .home-hero-image.other {
-  background-image: url('../images/2020-08-28-0140-Edit-small.jpg');
+  background-image: url('../images/IMG_8122-2---Copy.jpg');
 }
 
 .home-hero-content {
@@ -311,7 +311,7 @@ a {
   }
   .home-hero-image {
     height: 50vh;
-    background-position: 50% 75%;
+    background-position: 50% 20%;
     background-size: cover;
   }
   .home-hero-image.rotation {
@@ -321,7 +321,7 @@ a {
     background-position: 100% 47%;
   }
   .home-hero-image.other {
-    background-position: 50% 20%;
+    background-position: 50% 73%;
   }
   .paragraph {
     font-size: 16px;
