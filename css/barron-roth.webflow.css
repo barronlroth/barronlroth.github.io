@@ -873,3 +873,78 @@ h1 {
   font-style: normal;
   font-display: swap;
 }
+
+/* Add these new footer styles */
+.footer {
+  border-top: 1px solid var(--font-color);
+  padding: 60px 0;
+  margin-top: 100px;
+}
+
+.footer-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: start;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-name {
+  font-family: "Awesome Serif Extra Tall", Times New Roman, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.footer-tagline {
+  font-family: "Awesome Serif Italic Tall", Times New Roman, sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  max-width: 400px;
+  line-height: 1.4;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: right;
+}
+
+.footer-link {
+  font-family: Circular, Arial, sans-serif;
+  font-size: 18px;
+  color: var(--font-color);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.footer-link:hover {
+  opacity: 0.7;
+}
+
+.footer-copyright {
+  font-family: Circular, Arial, sans-serif;
+  font-size: 14px;
+  color: var(--font-color);
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .footer-right {
+    text-align: left;
+  }
+}
