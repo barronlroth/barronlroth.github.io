@@ -401,6 +401,12 @@ h1 {
   box-shadow: 4px 4px 0 0 var(--font-color);
   object-fit: cover;
   border-radius: 20px;
+  transition: all 0.3s ease; /* Smooth animation */
+}
+
+.card-image:hover {
+  box-shadow: 2px 4px 0 0 var(--font-color); /* "Pressed-in" shadow effect */
+  transform: translateY(-2px); /* Adds slight lift */
 }
 
 .overlay-text-wrapper {
