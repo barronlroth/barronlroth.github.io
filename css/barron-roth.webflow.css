@@ -231,8 +231,7 @@ h1 {
   flex-flow: column;
   justify-content: center;
   align-items: flex-start;
-  padding-left: 40px;
-  padding-right: 60px;
+  padding: 60px 60px 60px 40px;
   display: flex;
 }
 
@@ -248,14 +247,14 @@ h1 {
 .card-heading {
   margin-bottom: 16px;
   font-family: Awesome Serif Extra Tall, Times New Roman, sans-serif;
-  font-size: 90px;
+  font-size: 70px;
   font-weight: 300;
   line-height: .9;
 }
 
 .text-span-15 {
   font-family: Awesome Serif Italic Extra Tall, Times New Roman, sans-serif;
-  font-size: 105px;
+  font-size: 85px;
   font-style: italic;
   font-weight: 700;
   line-height: .9;
@@ -491,6 +490,14 @@ h1 {
   .image-wrapper {
     padding: 50px 60px 50px 60px;
   }
+
+  .card-heading {
+    font-size: 90px;
+  }
+  
+  .text-span-15 {
+    font-size: 105px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -579,6 +586,10 @@ h1 {
   .content-wrapper {
     border-right-style: none;
   }
+
+  .card-heading, .text-span-15 {
+    font-size: 70px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -639,7 +650,7 @@ h1 {
   }
 
   .card-heading, .text-span-15 {
-    font-size: 80px;
+    font-size: 70px;
   }
 
   .flex {
