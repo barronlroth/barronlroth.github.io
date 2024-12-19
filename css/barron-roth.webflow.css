@@ -87,8 +87,8 @@ h1 {
 
 .heading-1.mr {
   margin-right: 60px;
-  font-style: italic;
-  font-weight: 600;
+  font-family: "Awesome Serif Italic Extra Tall", Times New Roman, sans-serif;
+  font-weight: 700;
 }
 
 .heading-1.ml {
