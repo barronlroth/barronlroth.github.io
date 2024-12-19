@@ -1,0 +1,24 @@
+1|/* Add these keyframes for the jumble animation */
+2|@keyframes jumbleText {
+3|  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 1; }
+4|  25% { transform: translateY(-2px) rotate(3deg); opacity: 0.7; }
+5|  50% { transform: translateY(0) rotate(-2deg); opacity: 0.8; }
+6|  75% { transform: translateY(2px) rotate(1deg); opacity: 0.9; }
+7|}
+8|
+9|/* Update the text classes to include hover animation */
+10|.text-23-red, .text-23-purple {
+11|  transition: all 0.3s ease;
+12|}
+13|
+14|.text-23-red:hover, .text-23-purple:hover {
+15|  animation: jumbleText 0.4s ease infinite;
+16|  cursor: default;
+17|}
+18|
+19|/* Add individual character animations */
+20|.text-23-red:hover span, .text-23-purple:hover span {
+21|  display: inline-block;
+22|  animation: jumbleText 0.4s ease infinite;
+23|  animation-delay: calc(var(--char-index) * 0.05s);
+24|} 

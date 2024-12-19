@@ -1,0 +1,16 @@
+/* Add this JavaScript to wrap each character in the labels */
+document.addEventListener('DOMContentLoaded', function() {
+  const labels = document.querySelectorAll('.text-23-red, .text-23-purple');
+  
+  labels.forEach(label => {
+    const text = label.textContent;
+    label.textContent = '';
+    
+    [...text].forEach((char, index) => {
+      const span = document.createElement('span');
+      span.textContent = char;
+      span.style.setProperty('--char-index', index);
+      label.appendChild(span);
+    });
+  });
+}); 

@@ -971,3 +971,27 @@ h1 {
     text-align: left;
   }
 }
+
+/* Matrix-style character randomization effect */
+.text-23-red, .text-23-purple {
+  transition: all 0.3s ease;
+}
+
+.text-23-red span, .text-23-purple span {
+  display: inline-block;
+  transition: opacity 0.2s ease;
+  position: relative;
+}
+
+.text-23-red:hover, .text-23-purple:hover {
+  cursor: default;
+}
+
+.text-23-red:hover span, .text-23-purple:hover span {
+  color: inherit;
+  text-shadow: 0 0 8px rgba(238, 73, 87, 0.4);
+}
+
+.text-23-purple:hover span {
+  text-shadow: 0 0 8px rgba(169, 84, 147, 0.4);
+}
