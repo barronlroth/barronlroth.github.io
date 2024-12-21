@@ -330,6 +330,10 @@ h1 {
   inset: 0% 5% auto auto;
   letter-spacing: -2px;
   opacity: 0.9;
+  transform: translateZ(30px);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-out;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
 }
 
 .image-overlay-text._2 {
@@ -394,6 +398,10 @@ h1 {
 
 .image-wrapper-inner {
   position: relative;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  will-change: transform;
+  transition: transform 0.2s ease-out;
 }
 
 .image-wrapper-inner::before {
@@ -417,14 +425,44 @@ h1 {
   box-shadow: 4px 4px 0 0 var(--font-color);
   object-fit: cover;
   border-radius: 20px;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease-out;
+  transform: translateZ(0);
+  will-change: transform;
   position: relative;
-  z-index: 0;
 }
 
-.card-image:hover {
-  box-shadow: 2px 4px 0 0 var(--font-color); /* "Pressed-in" shadow effect */
-  transform: translateY(-2px); /* Adds slight lift */
+.image-wrapper-inner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 60%);
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+  pointer-events: none;
+}
+
+.image-wrapper-inner:hover {
+  transform: perspective(1000px) rotateX(var(--rx)) rotateY(var(--ry));
+}
+
+.image-wrapper-inner:hover::after {
+  opacity: 1;
+}
+
+.image-wrapper-inner:hover .card-image {
+  transform: translateZ(15px);
+  box-shadow: 
+    4px 4px 0 0 var(--font-color),
+    0 35px 80px rgba(14, 21, 47, 0.15),
+    0 12px 30px rgba(14, 21, 47, 0.1);
+}
+
+.image-wrapper-inner:hover .image-overlay-text {
+  transform: translateZ(40px);
 }
 
 .overlay-text-wrapper {
@@ -434,6 +472,13 @@ h1 {
   display: flex;
   position: absolute;
   inset: 0% auto auto 3%;
+  transform-style: preserve-3d;
+  transform: translateZ(30px);
+  transition: transform 0.3s ease-out;
+}
+
+.image-wrapper-inner:hover .overlay-text-wrapper {
+  transform: translateZ(40px);
 }
 
 .image-overlay-text-sm {
