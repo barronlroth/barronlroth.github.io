@@ -1059,3 +1059,75 @@ h1 {
 .text-23-purple:hover span {
   text-shadow: 0 0 8px rgba(169, 84, 147, 0.4);
 }
+
+@media screen and (max-width: 425px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .heading-1 {
+    font-size: 44px;
+  }
+
+  .heading-1.mr {
+    margin-right: 20px;
+    font-size: 44px;
+  }
+
+  .heading-1.ml.light {
+    margin-left: 0;
+    font-size: 44px;
+  }
+
+  .heading-1.light {
+    font-size: 44px;
+  }
+
+  .hero-md-2 {
+    min-width: 200px;
+    width: 200px;
+  }
+
+  .image {
+    width: 200px;
+    height: 220px;
+  }
+
+  .hero-bottom {
+    margin-top: -15px;
+  }
+
+  .text-50 {
+    font-size: 44px;
+  }
+
+  .text-70 {
+    font-size: 44px;
+  }
+
+  .mg-100 {
+    height: 50px;
+  }
+
+  .footer {
+    padding: 40px 0;
+    margin-top: 60px;
+  }
+
+  .footer-container {
+    padding: 0 16px;
+  }
+
+  .footer-name {
+    font-size: 28px;
+  }
+
+  .footer-tagline {
+    font-size: 18px;
+  }
+
+  .footer-link {
+    font-size: 16px;
+  }
+}
