@@ -263,9 +263,9 @@
           const centerX = rect.width / 2;
           const centerY = rect.height / 2;
           
-          // Reduced rotation values from /10 to /15 for more subtle movement
-          const rotateX = (y - centerY) / 15;
-          const rotateY = (centerX - x) / 15;
+          // Reduced rotation values by 50% (from /15 to /30)
+          const rotateX = (y - centerY) / 30;
+          const rotateY = (centerX - x) / 30;
           
           card.style.setProperty('--rx', `${rotateX}deg`);
           card.style.setProperty('--ry', `${rotateY}deg`);
