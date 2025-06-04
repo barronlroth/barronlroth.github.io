@@ -1,5 +1,6 @@
 # barronlroth.github.io
 Website using GH Pages Hosting
 
-this is my website
-i don't really know what i'm doing
+this is my personal website
+
+gh-pages branch is what is currently hosted
