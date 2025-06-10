@@ -390,8 +390,8 @@ h1 {
 }
 
 .image-overlay-text._5 {
-  font-family: Awesome Serif Italic, Times New Roman, sans-serif;
-  font-style: normal;
+  font-family: "Awesome Serif Italic Extra Tall", Times New Roman, sans-serif;
+  font-style: italic;
   font-weight: 700;
   position: static;
 }
@@ -484,10 +484,10 @@ h1 {
 .image-overlay-text-sm {
   color: var(--overlay-text-color);
   margin-top: -14px;
-  font-family: Awesome Serif Italic Tall, Times New Roman, sans-serif;
+  font-family: "Awesome Serif Italic Tall", Times New Roman, sans-serif;
   font-size: 23px;
-  font-style: normal;
-  font-weight: 700;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .image-overlay-text-sm._2 {
