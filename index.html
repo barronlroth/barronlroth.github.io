@@ -315,7 +315,7 @@
         const img = wrapper.querySelector('.card-image');
         const video = wrapper.querySelector('.card-video');
         
-        wrapper.addEventListener('click', () => {
+        wrapper.addEventListener('mouseenter', () => {
           // Show video and hide image
           img.classList.add('hidden');
           video.classList.add('playing');
@@ -323,13 +323,16 @@
           // Play the video
           video.currentTime = 0;
           video.play();
+        });
+        
+        wrapper.addEventListener('mouseleave', () => {
+          // Hide video and show image
+          img.classList.remove('hidden');
+          video.classList.remove('playing');
           
-          // When video ends
-          video.addEventListener('ended', () => {
-            // Hide video and show image
-            img.classList.remove('hidden');
-            video.classList.remove('playing');
-          }, { once: true }); // Remove listener after it fires once
+          // Pause and reset the video
+          video.pause();
+          video.currentTime = 0;
         });
       });
     });
