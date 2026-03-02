@@ -1256,8 +1256,17 @@ h1 {
 }
 
 /* Fix mobile headshot border gap */
+.hero-wrapper-mobile {
+  overflow: hidden;
+}
 .hero-wrapper-mobile > img {
   display: block;
   width: 100%;
-  margin-top: -1px;
+  object-fit: cover;
+}
+.hero-wrapper-mobile > .text-50 {
+  padding-bottom: 0;
+  margin-bottom: -2px;
+  position: relative;
+  z-index: 2;
 }

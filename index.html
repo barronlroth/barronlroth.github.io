@@ -354,8 +354,10 @@ document.querySelectorAll('.holo-card').forEach(card => {
 });
 
 // Set transition delays on Google letters
-document.querySelectorAll('.google-hover .gl').forEach((el, i) => {
-  el.style.setProperty('--i', i);
+document.querySelectorAll('.google-hover').forEach(parent => {
+  parent.querySelectorAll('.gl').forEach((el, i) => {
+    el.style.setProperty('--i', i);
+  });
 });
 
 // Flash Google colors on load — cascade in, then cascade out
