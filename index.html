@@ -358,9 +358,12 @@ document.querySelectorAll('.google-hover .gl').forEach((el, i) => {
   el.style.setProperty('--i', i);
 });
 
-// Auto-cascade Google colors on load
+// Flash Google colors on load — cascade in, then cascade out
 setTimeout(() => {
   document.querySelectorAll('.google-hover').forEach(el => el.classList.add('active'));
+  setTimeout(() => {
+    document.querySelectorAll('.google-hover').forEach(el => el.classList.remove('active'));
+  }, 800);
 }, 500);
 </script>
 </body>

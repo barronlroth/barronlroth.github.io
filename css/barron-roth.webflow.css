@@ -1254,3 +1254,10 @@ h1 {
 .holo-card:hover .image {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(201, 164, 74, 0.1);
 }
+
+/* Fix mobile headshot border gap */
+.hero-wrapper-mobile > img {
+  display: block;
+  width: 100%;
+  margin-top: -1px;
+}
