@@ -38,9 +38,9 @@
           </div>
           <div class="hero-md">
             <div class="hero-md-1">
-              <h1 class="heading-1 aline-right light">is a <span class="text-span-2">full–</span><span class="text-span-3">Product</span> <br>at <span class="text-span-4">Google</span> <span class="text-span-5">software</span></h1>
+              <h1 class="heading-1 aline-right light">is a <span class="text-span-2">full–</span><span class="text-span-3">Product</span> <br>at <span class="text-span-4 google-hover"><span class="gl">G</span><span class="gl">o</span><span class="gl">o</span><span class="gl">g</span><span class="gl">l</span><span class="gl">e</span></span> <span class="text-span-5">software</span></h1>
             </div>
-            <div class="hero-md-2"><img src="images/Barron-Roth.avif" loading="lazy" alt="A picture of Barron Roth" class="image"></div>
+            <div class="hero-md-2 holo-card"><img src="images/Barron-Roth.avif" loading="lazy" alt="A picture of Barron Roth" class="image"></div>
             <div class="hero-md-3">
               <h1 class="heading-1 light"><span class="text-span-6">stack</span> <br>‍<span class="text-span-7">Manager</span> <span class="text-span-8">trained in</span> <span class="text-span-9">engineering</span></h1>
             </div>
@@ -50,7 +50,7 @@
           </div>
         </div>
         <div class="hero-wrapper-mobile">
-          <div class="text-50"><span class="text-span-10">Barron Roth</span><br>is a <span class="text-span-12">full-stack</span> <br>Product Manager <br>at <span class="text-span-11">Google</span>, <span class="text-span-13">trained <br>in</span> software <br>engineering and <br><span class="text-span-14">driven by AI.</span></div><img src="images/Barron-Roth-small.avif" loading="lazy" alt="">
+          <div class="text-50"><span class="text-span-10">Barron Roth</span><br>is a <span class="text-span-12">full-stack</span> <br>Product Manager <br>at <span class="text-span-11 google-hover"><span class="gl">G</span><span class="gl">o</span><span class="gl">o</span><span class="gl">g</span><span class="gl">l</span><span class="gl">e</span></span>, <span class="text-span-13">trained <br>in</span> software <br>engineering and <br><span class="text-span-14">driven by AI.</span></div><img src="images/Barron-Roth-small.avif" loading="lazy" alt="">
         </div>
         <div class="hero-section-bottom">
           <div class="text-70">I’m driven by building The Future</div><img src="images/Arrow-1.png" loading="lazy" alt="" class="image-2">
@@ -76,7 +76,7 @@
                 <source src="images/shopify.webm" type="video/webm">
                 <source src="images/shopify.mp4" type="video/mp4">
               </video>
-              <div class="image-overlay-text _1">Shopify</div>
+              <div class="image-overlay-text _1 shopify-hover">Shopify</div>
             </div>
           </div>
         </div>
@@ -337,5 +337,36 @@
       });
     });
   </script>
+
+<script>
+// Holographic tilt on headshot
+document.querySelectorAll('.holo-card').forEach(card => {
+  const img = card.querySelector('.image');
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    img.style.transform = `rotateY(${x * 12}deg) rotateX(${-y * 12}deg) scale(1.02)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    img.style.transform = 'rotateY(0) rotateX(0) scale(1)';
+  });
+});
+
+// Set transition delays on Google letters
+document.querySelectorAll('.google-hover').forEach(parent => {
+  parent.querySelectorAll('.gl').forEach((el, i) => {
+    el.style.setProperty('--i', i);
+  });
+});
+
+// Flash Google colors on load — cascade in, then cascade out
+setTimeout(() => {
+  document.querySelectorAll('.google-hover').forEach(el => el.classList.add('active'));
+  setTimeout(() => {
+    document.querySelectorAll('.google-hover').forEach(el => el.classList.remove('active'));
+  }, 500);
+}, 500);
+</script>
 </body>
 </html>
