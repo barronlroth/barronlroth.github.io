@@ -357,6 +357,11 @@ document.querySelectorAll('.holo-card').forEach(card => {
 document.querySelectorAll('.google-hover .gl').forEach((el, i) => {
   el.style.setProperty('--i', i);
 });
+
+// Auto-cascade Google colors on load
+setTimeout(() => {
+  document.querySelectorAll('.google-hover').forEach(el => el.classList.add('active'));
+}, 500);
 </script>
 </body>
 </html>

@@ -1219,12 +1219,12 @@ h1 {
   transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: calc(var(--i, 0) * 0.05s);
 }
-.google-hover:hover .gl:nth-child(1) { color: #4285F4; --i: 0; }
-.google-hover:hover .gl:nth-child(2) { color: #EA4335; --i: 1; }
-.google-hover:hover .gl:nth-child(3) { color: #FBBC04; --i: 2; }
-.google-hover:hover .gl:nth-child(4) { color: #4285F4; --i: 3; }
-.google-hover:hover .gl:nth-child(5) { color: #34A853; --i: 4; }
-.google-hover:hover .gl:nth-child(6) { color: #EA4335; --i: 5; }
+.google-hover:hover .gl:nth-child(1), .google-hover.active .gl:nth-child(1) { color: #4285F4; --i: 0; }
+.google-hover:hover .gl:nth-child(2), .google-hover.active .gl:nth-child(2) { color: #EA4335; --i: 1; }
+.google-hover:hover .gl:nth-child(3), .google-hover.active .gl:nth-child(3) { color: #FBBC04; --i: 2; }
+.google-hover:hover .gl:nth-child(4), .google-hover.active .gl:nth-child(4) { color: #4285F4; --i: 3; }
+.google-hover:hover .gl:nth-child(5), .google-hover.active .gl:nth-child(5) { color: #34A853; --i: 4; }
+.google-hover:hover .gl:nth-child(6), .google-hover.active .gl:nth-child(6) { color: #EA4335; --i: 5; }
 
 /* Shopify green sweep on hover */
 .shopify-hover {
