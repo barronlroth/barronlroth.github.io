@@ -51,14 +51,14 @@ Personal portfolio website for Barron Roth (`www.barronroth.com`), built with cl
 1. **Lazy Hover / Tap-to-Play Videos**: `preload="none"` with `data-src`; streams on demand on desktop hover (`pointerenter`/`pointerleave`) or mobile tap toggle (`click`), with seamless crossfade and `loop`.
 2. **rAF-Throttled 3D Tilt**: Perspective rotation on project cards and holographic headshot with cached bounding rects (fine-pointer devices only).
 3. **Matrix Pill Scramble**: Character randomization on `.pill` hover with leak-free timer cleanup.
-4. **Brand Flourishes**: Google rainbow letter cascade (auto-flashes on load + hover) and Shopify green sweep on hover.
+4. **Brand Flourishes**: Unified `Google → DeepMind` 14-letter rainbow/blue cascade (auto-flashes on load + hover) and Shopify green sweep on hover.
 5. **Reduced Motion**: Respects `prefers-reduced-motion: reduce`.
 
 ### Content Sections
 
-1. **Hero Section**: Full-stack Product Manager introduction with split desktop typography + dedicated mobile layout
+1. **Hero Section**: AI builder & Product Manager at Google DeepMind introduction with diamond desktop typography + dedicated mobile layout
 2. **Project Cards** (7 career highlights):
-   - Google (`2025–Present`): The Future of Agents
+   - Google DeepMind (`2025–Present`): The Future of Agents (Antigravity)
    - Shopify (`2022–2025`): The Future of Retail
    - Wonder (`2020-2022`): The Future of Dining
    - The Rotation (`2018-2020`): The Future of Your Closet (acquired)

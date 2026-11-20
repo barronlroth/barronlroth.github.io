@@ -40,15 +40,33 @@
   }
 
   // ---------------------------------------------------------------------------
-  // 2. Google letter cascade flash on load
+  // 2. Unified Google -> DeepMind sequential letter cascade (on load + hover)
   // ---------------------------------------------------------------------------
+  const brandGroups = new Map();
+  document.querySelectorAll('[data-brand-group]').forEach((el) => {
+    const key = el.dataset.brandGroup;
+    if (!brandGroups.has(key)) brandGroups.set(key, []);
+    brandGroups.get(key).push(el);
+  });
+
+  brandGroups.forEach((members) => {
+    members.forEach((el) => {
+      el.addEventListener('pointerenter', () => {
+        members.forEach((m) => m.classList.add('active'));
+      });
+      el.addEventListener('pointerleave', () => {
+        members.forEach((m) => m.classList.remove('active'));
+      });
+    });
+  });
+
   if (!prefersReducedMotion) {
-    const googleWords = document.querySelectorAll('.google-hover');
+    const brandWords = document.querySelectorAll('.google-hover, .deepmind-hover');
     window.setTimeout(() => {
-      googleWords.forEach((el) => el.classList.add('active'));
+      brandWords.forEach((el) => el.classList.add('active'));
       window.setTimeout(() => {
-        googleWords.forEach((el) => el.classList.remove('active'));
-      }, 500);
+        brandWords.forEach((el) => el.classList.remove('active'));
+      }, 1150);
     }, 500);
   }
 
