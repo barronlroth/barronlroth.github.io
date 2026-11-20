@@ -1,11 +1,11 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-- `index.html` is the Webflow-exported entry point; keep structural edits minimal and prefer CSS tweaks for layout changes.
-- `css/` contains normalization, Webflow defaults, and the project-specific `barron-roth.webflow.css`; add new styles near related blocks and document overrides.
-- `js/webflow.js` holds interaction scripts; place custom logic in a new file inside `js/` and include it after the existing bundle to avoid merge conflicts.
-- Images, fonts, and favicons live in `images/`, `fonts/`, and `favicon.ico`; keep filenames descriptive and optimized (e.g., `hero-m.webp` for mobile hero art).
-- `CNAME` defines the custom domain—never delete or rename it when syncing with upstream Webflow exports.
+- `index.html` is the semantic, single-page static entry point (no Webflow or JS framework runtime).
+- `css/styles.css` holds all font declarations, tokens, layout styles, interactive flourishes, and responsive breakpoints; add new styles near related blocks.
+- `js/main.js` is the single deferred vanilla JS module (IIFE) powering deferred analytics, hover/tap-to-play videos, 3D tilt, matrix pill scramble, and the Google color cascade.
+- Assets live in `images/hero/`, `images/cards/` (responsive AVIF sets), `videos/` (lowercase fast-start H.264 MP4 clips), `fonts/` (subsetted WOFF2 files), and `favicon.ico`; keep all filenames lowercase to avoid case-sensitivity issues on GitHub Pages.
+- `CNAME` defines the custom domain—never delete or rename it.
 
 ## Build, Test, and Development Commands
 - Preview the site locally with `python3 -m http.server 8080` (run from the repo root and open `http://localhost:8080`).
@@ -14,8 +14,8 @@
 
 ## Coding Style & Naming Conventions
 - Maintain two-space indentation across HTML, CSS, and JavaScript to match existing files.
-- Keep CSS class names hyphenated and descriptive (`hero-section`, `cta-button--primary`), and reuse Webflow utility classes where possible.
-- When adding JavaScript, prefer small modules with self-invoking wrappers and avoid editing the generated `webflow.js` directly unless regenerating from Webflow.
+- Keep CSS class names hyphenated and descriptive (BEM-style modifiers like `project-card--media-left`, `hero-line--name`).
+- Keep JavaScript lightweight, dependency-free, wrapped in an IIFE, and respectful of `prefers-reduced-motion` and pointer capabilities (`hover: hover`).
 
 ## Testing Guidelines
 - There is no automated test suite; rely on manual QA across Chrome, Safari, and mobile viewports after each visual change.
