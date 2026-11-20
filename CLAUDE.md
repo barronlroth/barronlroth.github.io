@@ -2,38 +2,33 @@
 
 ## Overview
 
-This is a personal portfolio website for Barron Roth, built with Webflow and hosted on GitHub Pages. The site showcases professional experience as a Full-Stack Product Manager with a modern, interactive design aesthetic.
+Personal portfolio website for Barron Roth (`www.barronroth.com`), built with clean static HTML, CSS, and vanilla JavaScript and hosted on GitHub Pages.
 
 ## Technology Stack
 
-- **Framework**: Webflow (exported static site)
-- **Hosting**: GitHub Pages (gh-pages branch)
-- **Domain**: www.barronroth.com
-- **Analytics**: Google Analytics (G-P23R5QYZG2)
-- **Fonts**: 
-  - Google Fonts: Space Mono
-  - Custom fonts: AwesomeSerif (multiple variants), Circular
+- **Architecture**: Zero-framework static HTML, CSS, and deferred vanilla JS (migrated off Webflow)
+- **Hosting**: GitHub Pages (`gh-pages` branch)
+- **Domain**: `www.barronroth.com`
+- **Analytics**: Google Analytics 4 (`G-P23R5QYZG2`), deferred until `window.load` / idle
+- **Fonts**: All self-hosted Latin-subsetted WOFF2 (`AwesomeSerif` family, `Circular`, `Space Mono`)
 
 ## Project Structure
 
 ```
 /
-├── index.html              # Single-page portfolio site
-├── CNAME                   # Custom domain configuration
-├── README.md               # Basic project description
-├── favicon.ico             # Site favicon
+├── index.html          # Semantic single-page portfolio
+├── CNAME               # Custom domain configuration
+├── favicon.ico         # Root favicon
 ├── css/
-│   ├── normalize.css       # CSS reset
-│   ├── webflow.css         # Webflow framework styles
-│   └── barron-roth.webflow.css  # Custom project styles
+│   └── styles.css      # Consolidated reset, @font-face, layout, and responsive styles
 ├── js/
-│   └── webflow.js          # Webflow interactions
-├── fonts/                  # 19 custom font files (.otf, .ttf)
-└── images/                 # 37 media files
-    ├── *.webm             # Video content
-    ├── *.mp4              # Video fallbacks
-    ├── *.avif             # Modern image format
-    └── *.png              # Legacy images/icons
+│   └── main.js         # Deferred vanilla JS (analytics, videos, 3D tilt, matrix scramble)
+├── fonts/              # 12 subsetted .woff2 fonts
+├── videos/             # 7 lowercase fast-start H.264 .mp4 hover/tap clips
+└── images/
+    ├── hero/           # Responsive AVIF headshot (400w, 800w)
+    ├── cards/          # Responsive AVIF card posters (600w, 1000w, 1440w/1232w)
+    └── favicon* / og   # Vector/PNG favicons and Open Graph social image
 ```
 
 ## Key Features
@@ -47,102 +42,44 @@ This is a personal portfolio website for Barron Roth, built with Webflow and hos
   - Accent Red: `#ee4957`
   - Accent Purple: `#a95493`
 
-- **Typography**: Mixed serif system with responsive sizing (122px → 44px mobile)
-- **Layout**: Responsive grid system with 2-column cards → single column mobile
-- **Aesthetic**: Brutalist design with hard shadows and geometric shapes
+- **Typography**: Mixed `AwesomeSerif` editorial display typography, `Circular` body copy, and `Space Mono` metadata pills
+- **Layout**: Responsive 2-column alternating project grid → single column below `991px`
+- **Aesthetic**: Editorial brutalism with hard offset borders/shadows and subtle film-grain card overlay
 
-### Interactive Elements
+### Interactive Elements (`js/main.js`)
 
-1. **3D Card Tilt** (index.html:280-307)
-   - Perspective-based rotation on mouse movement
-   - Dynamic shadow enhancement
-   - CSS variables for smooth transitions
-
-2. **Matrix Text Animation** (index.html:213-277)
-   - Character scrambling effect on hover
-   - Applied to date/category labels
-   - Staggered animation timing
-
-3. **Click-to-Play Videos** (index.html:310-336)
-   - Image-to-video transitions on card click
-   - Auto-return to image on video end
-   - Smooth opacity transitions
+1. **Lazy Hover / Tap-to-Play Videos**: `preload="none"` with `data-src`; streams on demand on desktop hover (`pointerenter`/`pointerleave`) or mobile tap toggle (`click`), with seamless crossfade and `loop`.
+2. **rAF-Throttled 3D Tilt**: Perspective rotation on project cards and holographic headshot with cached bounding rects (fine-pointer devices only).
+3. **Matrix Pill Scramble**: Character randomization on `.pill` hover with leak-free timer cleanup.
+4. **Brand Flourishes**: Google rainbow letter cascade (auto-flashes on load + hover) and Shopify green sweep on hover.
+5. **Reduced Motion**: Respects `prefers-reduced-motion: reduce`.
 
 ### Content Sections
 
-1. **Hero Section**: Full-stack Product Manager introduction with dynamic typography
-2. **Project Cards**: 6 career highlights with interactive media
-   - Shopify (2022-Present): Retail software/POS
-   - Wonder (2020-2022): Consumer dining innovation
-   - The Rotation (2018-2020): Fashion subscription (acquired)
-   - Screenshop (2018-2019): Style AI (acquired by Snap)
-   - Blade (2016-2018): Urban air mobility
-   - AMD (2014): Xbox hardware engineering
+1. **Hero Section**: Full-stack Product Manager introduction with split desktop typography + dedicated mobile layout
+2. **Project Cards** (7 career highlights):
+   - Google (`2025–Present`): The Future of Agents
+   - Shopify (`2022–2025`): The Future of Retail
+   - Wonder (`2020-2022`): The Future of Dining
+   - The Rotation (`2018-2020`): The Future of Your Closet (acquired)
+   - Screenshop (`2018-2019`): The Future of Style AI (acquired by Snap)
+   - Blade (`2016-2018`): The Future of Flight
+   - AMD (`2014`): The Future of Gaming
+3. **Footer**: Contact links and social profiles
 
-3. **Footer**: Contact links and social media
+## Adding New Projects
 
-## Performance Optimizations
-
-- Modern image formats (AVIF with PNG fallbacks)
-- WebM video format with MP4 fallbacks
-- Lazy loading for images
-- Hardware-accelerated CSS transforms
-- Will-change optimization for animations
-
-## Development Notes
-
-### Git Workflow
-- Main branch: `gh-pages` (for GitHub Pages deployment)
-- Current branch: `fix-wide-shadow`
-- Recent work: Font rendering fixes, Google Analytics integration
-
-### Key Files to Edit
-- `index.html` - All content and structure
-- `css/barron-roth.webflow.css` - Custom styles and animations
-- JavaScript is inline in `index.html` (lines 213-336)
-
-### Adding New Projects
-1. Add media files to `/images/`
-2. Duplicate a card section in `index.html`
-3. Update content, dates, and links
-4. Ensure video files have both .webm and .mp4 versions
-
-### Responsive Breakpoints
-- Desktop: > 1600px
-- Large: 1440px
-- Medium: 991px
-- Tablet: 767px
-- Mobile: 479px
-- Small: 425px
+1. Add responsive AVIF posters (`600w`, `1000w`, `1440w`) under `images/cards/<slug>-*.avif`.
+2. Add an optimized lowercase fast-start H.264 clip (`800w`, `-movflags +faststart`, `-an`) under `videos/<slug>.mp4`.
+3. Duplicate an `<article class="project-card">` block in `index.html`, alternating `.project-card--media-left`.
 
 ## Maintenance Commands
 
 ```bash
-# Check current status
+# Preview locally
+python3 -m http.server 8080
+
+# Check status and history
 git status
-
-# View recent commits
 git log --oneline -10
-
-# Test locally (if you have a local server)
-python -m http.server 8000
-
-# Deploy changes
-git add .
-git commit -m "Update description"
-git push origin gh-pages
 ```
-
-## Known Issues
-
-- Wide shadow rendering on certain devices (currently being fixed)
-- Overlay font rendering on iOS Safari (recently fixed)
-
-## Future Enhancements
-
-Consider:
-- Adding a blog section
-- Implementing dark mode
-- Adding more detailed case studies
-- Performance monitoring with web vitals
-- SEO optimizations (structured data, meta tags)
